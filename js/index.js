@@ -39,4 +39,56 @@ let swiper = new Swiper(".mySwiper", {
       spaceBetween: 10,
     },
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  debugger: true,
+});
+
+// mobile nav
+const hamburger = document.querySelector(".hamburger");
+const Nav = document.querySelector(".mobile_nav");
+const mobileCancel = document.querySelector(".mobile__cancel");
+mobileCancel.addEventListener("click", () => {
+  Nav.classList.add("mobile_nav_hide");
+});
+hamburger.addEventListener("click", () => {
+  Nav.classList.toggle("mobile_nav_hide");
+});
+
+// Animations
+
+ScrollReveal().reveal(".top_nav", {
+  origin: "bottom",
+  distance: "20px",
+  opacity: 0,
+});
+
+ScrollReveal().reveal(".nav", {
+  origin: "bottom",
+  distance: "20px",
+  opacity: 0,
+  delay: 100,
+});
+ScrollReveal().reveal(".header", {
+  origin: "bottom",
+  distance: "20px",
+  opacity: 0,
+  delay: 200,
+});
+ScrollReveal().reveal(".section", {
+  origin: "bottom",
+  distance: "20px",
+  opacity: 0,
+  duration: 1000,
+  delay: 200,
+  easing: "ease-in-out",
+});
+ScrollReveal().reveal(".footer", {
+  origin: "bottom",
+  distance: "20px",
+  opacity: 0,
+  duration: 1000,
+  delay: 200,
 });
